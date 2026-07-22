@@ -1,175 +1,134 @@
-# 🎣 Automated Phishing Email Generator
+# Mailer Project
 
-> **Generate realistic phishing email templates for ethical security awareness training and authorized phishing simulations.**
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python" />
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Purpose-Cybersecurity-red?style=for-the-badge" />
-</p>
+## Overview
 
----
+The Mailer project is a campaign management system built using Django, Tkinter, SQLite3, BeautifulSoup, and GrapesJS. This tool allows users to create and manage email campaigns efficiently. The project provides a user-friendly interface to handle various aspects of email marketing/phishing.
 
-## 🚀 Overview
 
-**Automated Phishing Email Generator** is a Python-based application that generates realistic and customizable phishing email templates for **cybersecurity awareness training** and **authorized penetration testing**.
+## Features
 
-The project helps security professionals, educators, and students simulate phishing campaigns in a controlled environment to improve users' ability to identify and respond to phishing attempts.
+- **Campaign Management**: Create, modify, and manage email campaigns effortlessly.
+- **User Interface**: A simple and intuitive interface powered by Tkinter for easy navigation.
+- **Database**: Utilizes SQLite3 for storing campaign data securely and efficiently.
+- **Web Scraping**: Leverages BeautifulSoup for scraping data as needed.
+- **Email Template Editor**: Integrates GrapesJS for designing email templates visually.
+- **Custom Domain (Future Scope)**: In the future, the project will allow tracking of links with custom domain names instead of the current same-server setup.
+- **Standalone Website Templates (Future Scope)**: Users will be able to choose from multiple phishing templates or scrape live websites to use as templates.
+- **Multi-Page Web Scraper (Future Scope)**: Future versions will allow users to scrape multiple connected web pages and interact with forms or links on the recipient site, while keeping the site running locally or on the user's server.
+  
 
-> ⚠️ **Disclaimer:** This project is intended **strictly for educational purposes, cybersecurity awareness, and authorized security assessments.** Do not use it for unauthorized or malicious activities.
+## Getting Started
 
----
+To get started with the Mailer project, follow these instructions to download and run the application.
 
-## ✨ Features
+### Prerequisites
 
-- 🎯 Generate realistic phishing email templates
-- 📝 Fully customizable subject, sender, and message body
-- 📂 Multiple phishing scenarios
-- ⚡ Fast template generation
-- 🔄 Easy to modify and extend
-- 💻 Simple and lightweight Python application
+- Python 3.x
+- pip (Python package installer)
 
----
+### Installation
 
-## 📸 Demo
+1. **Clone the Repository**:
 
-> Add screenshots or GIFs here
+   You can either download the project as a ZIP file from GitHub or clone the repository using the following command:
 
-```
-assets/
-├── home.png
-├── generator.png
-└── output.png
-```
+   ```bash
+   git clone https://github.com/HimnishParmar/Mailer.git
+   ```
 
----
+2. **Navigate to the Project Directory**:
 
-## 🛠️ Tech Stack
+   Change to the project directory:
 
-| Technology | Purpose |
-|------------|---------|
-| 🐍 Python | Core Application |
-| 🖥️ Tkinter | GUI (if used) |
-| 📄 JSON | Template Storage |
-| 📧 SMTP | Email Simulation (Optional) |
+   ```bash
+   cd Mailer
+   ```
 
----
+3. **Run the Installer**:
 
-## 📁 Project Structure
+   For **Windows**, execute the `Mailer.bat` file to start the application.
 
-```
-Automated-Phishing-Email-Generator/
-│
-├── templates/
-├── assets/
-├── generator.py
-├── requirements.txt
-├── README.md
-└── LICENSE
-```
+   For **Linux/MacOS**, execute the `Mailer.sh` file to start the application.
 
----
+### Running the Application
 
-## ⚙️ Installation
+- **Windows**: Double-click on `Mailer.bat` to launch the application.
+- **Linux/MacOS**: Open a terminal and run the following command:
 
-### Clone the Repository
+  ```bash
+  bash Mailer.sh
+  ```
 
-```bash
-git clone https://github.com/yourusername/Automated-Phishing-Email-Generator.git
-```
+### Usage
 
-Move into the project directory
+Once the application is running, you will be presented with the main interface. You can start creating and managing your email campaigns through the user-friendly GUI.
 
-```bash
-cd Automated-Phishing-Email-Generator
-```
 
-Install dependencies
+## API Services Used
 
-```bash
-pip install -r requirements.txt
-```
+This project utilizes the following API services to gather information about IP addresses:
 
-Run the project
+- **Shodan**: A search engine for Internet-connected devices that provides data about vulnerabilities and configurations.
+- **IPinfo**: A service that provides detailed information about IP addresses, including location, organization, and other relevant metadata.
+- **IP-API**: A simple API for geolocation of IP addresses, offering information such as latitude, longitude, and city.
+- **Ngrok**: A tool that creates secure tunnels to your localhost, allowing you to expose a local server to the internet. This is particularly useful for testing webhooks, API integrations, or sharing your work with others without deploying it to a public server.
 
-```bash
-python generator.py
-```
 
----
+## Required API Keys
+To use the Mailer project effectively, you will need to obtain the following API keys and provide them in the settings panel of the application:
 
-## 🎯 Use Cases
+1. **Shodan API Key**: 
+   - Sign up at [Shodan](https://account.shodan.io/register) and obtain your API key from your account settings. 
+   - Enter your Shodan API key in the settings panel of the tool to enable functionality related to Shodan.
 
-- Cybersecurity Awareness Training
-- Educational Demonstrations
-- Ethical Hacking Labs
-- Penetration Testing Practice
-- Security Research
+2. **Ngrok Auth Key**: 
+   - Sign up at [Ngrok](https://dashboard.ngrok.com/signup) and get your auth token from the Ngrok dashboard.
+   - Provide your Ngrok auth token in the settings panel to allow the application to create secure tunnels to your localhost.
 
----
+### Setting Up API Keys
+Once you have obtained your API keys, follow these steps:
 
-## 📌 Future Enhancements
+- Open the Mailer application.
+- Navigate to the settings panel.
+- Enter your Shodan API key and Ngrok auth token in their respective fields.
+- Save the settings to enable API functionality.
 
-- AI-generated phishing templates
-- Email difficulty levels
-- Multiple language support
-- Analytics dashboard
-- Bulk email template generation
-- Modern graphical interface
+These keys are essential for the full operation of the Mailer project, allowing you to gather information about IP addresses and use Ngrok for tunneling.
 
----
 
-## 🤝 Contributing
+## Future Scope
 
-Contributions are always welcome!
+- **Standalone Servers**: Moving tracking links and campaigns to work across standalone servers and custom domains.
+- **Multiple Phishing Templates**: Adding multiple website and email templates that users can select for their campaigns.
+- **Advanced Web Scraper**: Enhance web scraping functionality to allow multi-page scraping, enabling users to interact with the original site through forms and links within their environment.
+- **URL Crawling**: Implement URL crawling for dynamic content gathering and full-site scraping.
+- **Legitimate Site Replication**: Automatically scrape and modify sites to make them look like legitimate sites for phishing simulations.
 
-1. Fork the repository
-2. Create a new branch
 
-```bash
-git checkout -b feature-name
-```
+## Future Features
 
-3. Commit your changes
+- **Advanced IP Geolocation**: Integration of additional IP tracking services for more precise geolocation and device data.
+- **Standalone Server**: Tracking on custom domains with independent servers.
+- **Email Phishing Templates**: Pre-designed and ready-to-use phishing templates for a variety of scenarios.
+- **Multi-Page Scraping**: Full website scraping capabilities with form interaction, allowing users to simulate real websites locally.
 
-```bash
-git commit -m "Added new feature"
-```
 
-4. Push your branch
+## License
 
-```bash
-git push origin feature-name
-```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-5. Open a Pull Request
 
----
+## Contributing
 
-## 📜 License
+Contributions are welcome! If you have suggestions for improvements or bug fixes, please submit a pull request.
 
-This project is licensed under the **MIT License**.
 
----
+## Acknowledgments
 
-## ⚠️ Ethical Use Notice
-
-This repository is created **solely for educational purposes and authorized cybersecurity training**.
-
-The author does **not** support or encourage phishing, cybercrime, or any illegal activity. Users are responsible for complying with all applicable laws and regulations.
-
----
-
-## 👩‍💻 Author
-
-**Ankita Yadav**
-
-💼 Cybersecurity Enthusiast  
-🛡️ Ethical Hacking | Python | Network Security
-
----
-
-<p align="center">
-⭐ If you found this project useful, consider giving it a Star!
-</p>
+- [Django](https://www.djangoproject.com/) - The web framework used for building the application.
+- [Tkinter](https://wiki.python.org/moin/TkInter) - For the GUI.
+- [CTkinter](https://customtkinter.tomschimansky.com/) - For the GUI.
+- [SQLite3](https://www.sqlite.org/index.html) - For the database.
+- [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) - For web scraping.
+- [GrapesJS](https://grapesjs.com/) - For the email template editor.
